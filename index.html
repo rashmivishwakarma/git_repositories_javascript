@@ -6,12 +6,12 @@
 
 <div>
     <input id="gitUser" type="text"/>
-    <button type="button" onclick="loadXMLDoc()">get git repos</button>
+    <button type="button" onclick="loadGitRepos()">get git repos</button>
     <div id="gitData"></div>
 </div>
 
 <script>
-    function loadXMLDoc() {
+    function loadGitRepos() {
         document.getElementById("gitData").innerHTML = " ";
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {

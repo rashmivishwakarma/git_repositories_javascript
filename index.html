@@ -18,10 +18,10 @@
             if(this.readyState == 4){
                 var div = document.getElementById("gitData");
                 if (this.status == 200) {
-                    var x = JSON.parse(this.responseText);
-                    if(x.length > 0) {
-                        for (var y in x) {
-                            div.innerHTML += "<div>" +x[y].name+"</div>" ;
+                    var repoArray = JSON.parse(this.responseText);
+                    if(repoArray.length > 0) {
+                        for (var repoObj in repoArray) {
+                            div.innerHTML += "<div>" + (+repoObj+1) + ". " + repoArray[repoObj].name+"</div>" ;
                         }
                     } else {
                         div.innerHTML = "you have 0 git repo"

@@ -6,7 +6,7 @@
 
 <div>
     <input id="gitUser" type="text"/>
-    <button type="button" onclick="loadXMLDoc()">get github repos</button>
+    <button type="button" onclick="loadXMLDoc()">get git repos</button>
     <div id="gitData"></div>
 </div>
 
@@ -20,7 +20,7 @@
                 if (this.status == 200) {
                     var repoArray = JSON.parse(this.responseText);
                     if(repoArray.length > 0) {
-                        for (var repoObj in repoArray) {
+                        for (var num in repoArray) {
                             div.innerHTML += "<div>" + (+repoObj+1) + ". " + repoArray[repoObj].name+"</div>" ;
                         }
                     } else {

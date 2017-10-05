@@ -20,7 +20,7 @@
                 if (this.status == 200) {
                     var repoArray = JSON.parse(this.responseText);
                     if(repoArray.length > 0) {
-                        for (var num in repoArray) {
+                        for (var repoObj in repoArray) {
                             div.innerHTML += "<div>" + (+repoObj+1) + ". " + repoArray[repoObj].name+"</div>" ;
                         }
                     } else {

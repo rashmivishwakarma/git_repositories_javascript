@@ -4,6 +4,8 @@ clone this repository to fetch git repos for a user
 
 #Steps to run :
 
+Go to root folder of your project open cmd 
+
 1. npm install http-server -g
 
 2. http-server -p 1234
